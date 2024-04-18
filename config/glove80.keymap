@@ -266,6 +266,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        mm_sqt_lparens: mm_sqt_lparens {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_SQT_LPARENS";
+            bindings = <&kp SQT>, <&kp LEFT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_quote_rparens: mm_quote_rparens {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_QUOTE_RPARENS";
+            bindings = <&kp DOUBLE_QUOTES>, <&kp RIGHT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -510,12 +528,12 @@
 
         angram {
             bindings = <
-&kp F1     &kp F2                    &kp F3            &kp F4            &kp F5                                                                                                                                                                                                                                                     &kp F6                   &kp F7            &kp F8            &kp F9             &kp F10
-&kp LBKT   &kp N1                    &kp N2            &kp N3            &kp N4             &kp N5                                                                                                                                                                                                                &kp N6            &kp N7                   &kp N8            &kp N9            &kp N0             &kp RBKT
-&kp TAB    &kp Q                     &kp Y             &kp O             &kp U              &mm_question_exc                                                                                                                                                                                                      &kp SQT           &kp P                    &kp L             &kp W             &kp X              &kp Z
-&kp GRAVE  &ht_kp_lt LEFT_CONTROL R  &ht_kp_lt LALT I  &ht_kp_lt LGUI E  &ht_kp_lt LSHFT A  &mm_comma_semi                                                                                                                                                                                                        &mm_period_colon  &ht_kp_rt RIGHT_SHIFT H  &ht_kp_rt LGUI T  &ht_kp_rt RALT S  &ht_kp_rt RCTRL N  &kp J
-&trans     &kp V                     &kp C             &kp K             &kp D              &mm_underscrore_equals  &ht_kp LEFT_SHIFT ESCAPE  &ht_kp LEFT_CONTROL LEFT_PARENTHESIS  &ht_kp LEFT_ALT LEFT_BRACKET  &ht_kp RIGHT_ALT RIGHT_BRACKET  &ht_kp RIGHT_CONTROL RIGHT_PARENTHESIS  &ht_kp RIGHT_SHIFT TAB  &mm_minus_plus    &kp M                    &kp W             &kp F             &kp V              &trans
-&trans     &trans                    &trans            &trans            &trans                                     &ht_mo 3 BACKSPACE        &ht_mo 4 DELETE                       &key_repeat                   &to 5                           &ht_mo 4 RETURN                         &ht_mo 3 SPACE                            &trans                   &trans            &trans            &trans             &trans
+&kp F1      &kp F2                    &kp F3                  &kp F4                 &kp F5                                                                                                                                                                                                                                                &kp F6                   &kp F7            &kp F8            &kp F9             &kp F10
+&kp LBKT    &kp N1                    &kp N2                  &kp N3                 &kp N4             &kp N5                                                                                                                                                                                                          &kp N6             &kp N7                   &kp N8            &kp N9            &kp N0             &kp RBKT
+&kp TAB     &kp Q                     &kp Y                   &kp O                  &kp U              &mm_sqt_lparens                                                                                                                                                                                                 &mm_quote_rparens  &kp P                    &kp L             &kp W             &kp V              &kp Z
+&kp ESCAPE  &ht_kp_lt LEFT_CONTROL R  &ht_kp_lt LALT I        &ht_kp_lt LGUI E       &ht_kp_lt LSHFT A  &mm_comma_semi                                                                                                                                                                                                  &mm_period_colon   &ht_kp_rt RIGHT_SHIFT H  &ht_kp_rt LGUI T  &ht_kp_rt RALT S  &ht_kp_rt RCTRL N  &kp J
+&kp GRAVE   &kp X                     &kp C                   &kp K                  &kp D              &mm_question_exc  &ht_kp LEFT_SHIFT ESCAPE  &ht_kp LEFT_CONTROL LEFT_PARENTHESIS  &ht_kp LEFT_ALT LEFT_BRACKET  &ht_kp RIGHT_ALT RIGHT_BRACKET  &ht_kp RIGHT_CONTROL RIGHT_PARENTHESIS  &ht_kp RIGHT_SHIFT TAB  &kp MINUS          &kp G                    &kp M             &kp B             &kp F              &kp RSHIFT
+&magic 7 0  &ht_kp LSHFT HOME         &ht_kp LCTRL PAGE_DOWN  &ht_kp LALT PAGE_DOWN  &ht_kp LCMD END                      &ht_mo 3 BACKSPACE        &ht_mo 4 DELETE                       &key_repeat                   &to 5                           &ht_mo 4 RETURN                         &ht_mo 3 SPACE                             &kp LEFT                 &kp DOWN_ARROW    &kp UP_ARROW      &kp RIGHT          &to 5
             >;
         };
 
